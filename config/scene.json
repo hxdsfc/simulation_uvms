@@ -1,0 +1,43 @@
+{
+  "table": {
+    "center_xy_m": [
+      0.02,
+      -0.31
+    ],
+    "size_xy_m": [
+      0.42,
+      0.3
+    ],
+    "top_height_m": 0.2746837886255133,
+    "thickness_m": 0.02
+  },
+  "block": {
+    "position_xy_m": [
+      -0.01905918833670427,
+      -0.27704811330320983
+    ],
+    "edge_m": 0.03,
+    "mass_kg": 0.06,
+    "initial_clearance_m": 0.0006,
+    "friction": [
+      1.0,
+      0.005,
+      0.0001
+    ],
+    "yaw_rad": 1.0
+  },
+  "camera": {
+    "lookat_m": [
+      0.1,
+      -0.15,
+      0.38
+    ],
+    "distance_m": 1.0,
+    "azimuth_deg": 135,
+    "elevation_deg": -25
+  },
+  "place_position_xy_m": [
+    0.10463137100515102,
+    -0.3251365725781339
+  ]
+}

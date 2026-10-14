@@ -1,0 +1,124 @@
+{
+  "mode": "pick_place",
+  "pickup_position_m": [
+    -0.01905918833670427,
+    -0.27704811330320983,
+    0.2896837886255133
+  ],
+  "place_position_m": [
+    0.10463137100515102,
+    -0.3251365725781339,
+    0.2896837886255133
+  ],
+  "stages": [
+    {
+      "phase": "open",
+      "duration_s": 2,
+      "gripper": 1
+    },
+    {
+      "phase": "approach",
+      "duration_s": 10,
+      "gripper": 1,
+      "q": [
+        1,
+        1.2,
+        1.5,
+        2.0943951
+      ]
+    },
+    {
+      "phase": "approach",
+      "duration_s": 10,
+      "gripper": 1,
+      "q": [
+        1,
+        0.94,
+        2.5707963267948966,
+        2.0943951
+      ]
+    },
+    {
+      "phase": "descend",
+      "duration_s": 3,
+      "gripper": 1,
+      "q": [
+        1,
+        0.8,
+        2.5707963267948966,
+        2.0943951
+      ]
+    },
+    {
+      "phase": "close",
+      "duration_s": 3,
+      "gripper": 0
+    },
+    {
+      "phase": "lift",
+      "duration_s": 5,
+      "gripper": 0,
+      "q": [
+        1,
+        1.2,
+        2.9707963267948965,
+        2.0943951
+      ]
+    },
+    {
+      "phase": "transfer",
+      "duration_s": 8,
+      "gripper": 0,
+      "q": [
+        1.4,
+        1.2,
+        2.9707963267948965,
+        2.0943951
+      ]
+    },
+    {
+      "phase": "lower",
+      "duration_s": 5,
+      "gripper": 0,
+      "q": [
+        1.4,
+        0.8,
+        2.5707963267948966,
+        2.0943951
+      ]
+    },
+    {
+      "phase": "release",
+      "duration_s": 3,
+      "gripper": 1
+    },
+    {
+      "phase": "retreat",
+      "duration_s": 5,
+      "gripper": 1,
+      "q": [
+        1.4,
+        1.2,
+        2.9707963267948965,
+        2.0943951
+      ]
+    }
+  ],
+  "controller": {
+    "kp_accel": [
+      900,
+      900,
+      900,
+      900,
+      10000
+    ],
+    "kd_accel": [
+      60,
+      60,
+      60,
+      60,
+      200
+    ]
+  },
+  "grip_force_n": 6
+}

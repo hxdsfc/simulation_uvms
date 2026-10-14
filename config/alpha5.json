@@ -1,0 +1,10 @@
+{
+  "model": "Reach Alpha 5",
+  "mount_height_m": 0.35,
+  "timestep_s": 0.002,
+  "actuated_joints": ["axis_e", "axis_d", "axis_c", "axis_b", "axis_a"],
+  "home": {"axis_e": 0.6, "axis_d": 1.5746, "axis_c": 0.8, "axis_b": 0.6, "axis_a": 0.004, "rs1_130_joint": 0.204, "rs1_139_joint": 0.204},
+  "joint_damping": 0.02,
+  "joint_armature": 0.0001,
+  "water": {"density": 1000.0, "viscosity": 0.001}
+}

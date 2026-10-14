@@ -1,0 +1,84 @@
+<mujoco model="reach_alpha_5">
+  <compiler angle="radian"/>
+
+  <asset>
+    <mesh name="RS1-1010" content_type="model/obj" file="assets/RS1-1010.obj"/>
+    <mesh name="M3-INLINE" content_type="model/obj" file="assets/M3-INLINE.obj"/>
+    <mesh name="M2-1-1" content_type="model/obj" file="assets/M2-1-1.obj"/>
+    <mesh name="M2" content_type="model/obj" file="assets/M2.obj"/>
+    <mesh name="M2-1-3" content_type="model/obj" file="assets/M2-1-3.obj"/>
+    <mesh name="M1" content_type="model/obj" file="assets/M1.obj"/>
+    <mesh name="RS1-124" content_type="model/obj" file="assets/RS1-124.obj"/>
+    <mesh name="RS1-130" content_type="model/obj" file="assets/RS1-130.obj"/>
+    <mesh name="RS1-139" content_type="model/obj" file="assets/RS1-139.obj"/>
+  </asset>
+
+  <worldbody>
+    <body name="base_link" pos="0.0374 0 0.3725">
+      <inertial pos="0 0 0" mass="0.0001" diaginertia="0.0001 0.0001 0.0001"/>
+      <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="RS1-1010"/>
+      <geom size="0.02 0.075" pos="-0.055 0 0" quat="0.707123 0 0.70709 0" type="cylinder"/>
+      <body name="m3_inline_link" pos="0.124 0.004 0">
+        <inertial pos="-0.055 0 0" quat="0.5 0.5 0.5 0.5" mass="0.341" diaginertia="0.000673 0.000673 6.82e-05"/>
+        <geom pos="0 0 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="M3-INLINE"/>
+        <geom size="0.02 0.075" pos="-0.055 0 0" quat="0.707123 0 0.70709 0" type="cylinder"/>
+        <body name="m2_1_1_link" pos="0 0 0.014">
+          <inertial pos="0 0 0.0165" quat="0.5 0.5 -0.5 0.5" mass="0.194" diaginertia="3.88e-05 3.7e-05 3.7e-05"/>
+          <joint name="axis_e" range="0 6.1" actuatorfrcrange="-9 9"/>
+          <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="M2-1-1"/>
+          <geom size="0.02 0.0165" pos="0 0 0.0165" type="cylinder"/>
+          <body name="m2_link" pos="-0.02 0 0.033">
+            <inertial pos="-0.02 0 -0.0725" mass="0.429" diaginertia="0.0008907 0.0008907 8.58e-05"/>
+            <joint name="axis_d" range="-3.49 3.49" actuatorfrcrange="-9 9" axis="0 1 0"/>
+            <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="M2"/>
+            <geom size="0.02 0.0725" pos="-0.02 0 -0.0725" type="cylinder"/>
+            <geom size="0.02 0.02" quat="0.707141 0.707073 0 0" type="cylinder"/>
+            <geom size="0.02 0.02" pos="-0.04 0 -0.1453" quat="0.707141 0.707073 0 0" type="cylinder"/>
+            <body name="m2_1_3_link" pos="-0.04 0 -0.1453" quat="1.32679e-06 0 0 1">
+              <inertial pos="0.02 0 0.0165" quat="0.5 0.5 -0.5 0.5" mass="0.115" diaginertia="2.3e-05 2.19e-05 2.19e-05"/>
+              <joint name="axis_c" range="0 3.22" actuatorfrcrange="-9 9" axis="0 1 0"/>
+              <geom quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="M2-1-3"/>
+              <geom size="0.02 0.0165" pos="0.02 0 0.0165" type="cylinder"/>
+              <body name="m1_link" pos="0.02 0 0.033" quat="0.500002 0 0 0.866024">
+                <inertial pos="0 0 0.05" mass="0.2" diaginertia="0.0001867 0.0001867 4e-05"/>
+                <joint name="axis_b" range="0 3.22" actuatorfrcrange="-9 9" axis="0 0 -1"/>
+                <geom pos="0 0 0" quat="0.707141 0 -0.707073 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="M1"/>
+                <geom size="0.02 0.05" pos="0 0 0.05" type="cylinder"/>
+                <body name="rs1_124_link" pos="0 0 0.09975">
+                  <inertial pos="0 0 0" mass="0.0001" diaginertia="0.0001 0.0001 0.0001"/>
+                  <geom quat="0.707141 0 -0.707073 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="RS1-124"/>
+                  <geom size="0.02 0.05" pos="0 0 0.05" type="cylinder"/>
+                  <body name="push_rod" pos="0 0 0.009">
+                    <inertial pos="0 0 0" mass="0.0001" diaginertia="0.0001 0.0001 0.0001"/>
+                    <joint name="axis_a" type="slide" range="0 0.015" actuatorfrcrange="-10 10"/>
+                    <geom size="0.0005 0.0005 0.0005" type="box" contype="0" conaffinity="0" group="1" rgba="0 0 0 0" density="0"/>
+                  </body>
+                  <body name="rs1_130_link" pos="0 0.0155 0.0069">
+                    <inertial pos="0 -0.008 0.045" mass="0.055" diaginertia="4.125e-05 3.7785e-05 4.785e-06"/>
+                    <joint name="rs1_130_joint" range="0 0.5" actuatorfrcrange="-10 10" axis="-1 0 0"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="RS1-130"/>
+                    <geom size="0.006 0.015 0.045" pos="0 -0.008 0.045" type="box"/>
+                  </body>
+                  <body name="rs1_139_link" pos="0 -0.0155 0.0069">
+                    <inertial pos="0 0.008 0.045" mass="0.055" diaginertia="4.125e-05 3.7785e-05 4.785e-06"/>
+                    <joint name="rs1_139_joint" range="0 0.5" actuatorfrcrange="-10 10" axis="1 0 0"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="RS1-139"/>
+                    <geom size="0.006 0.015 0.045" pos="0 0.008 0.045" type="box"/>
+                  </body>
+                  <body name="tcp" pos="0 0 0.04" quat="0.707107 0 -0.707107 0">
+                    <inertial pos="0 0 0" mass="0.0001" diaginertia="0.0001 0.0001 0.0001"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <equality>
+    <joint joint1="rs1_130_joint" joint2="axis_a" polycoef="0 51 0 0 0"/>
+    <joint joint1="rs1_139_joint" joint2="rs1_130_joint"/>
+  </equality>
+</mujoco>

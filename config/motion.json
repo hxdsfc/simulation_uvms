@@ -1,0 +1,11 @@
+{
+  "cartesian_min_world_m": [-0.35, -0.50, 0.03],
+  "cartesian_max_world_m": [0.68, 0.51, 0.88],
+  "joint_speed_deg_s": [20.0, 20.0, 20.0, 25.0],
+  "tcp_speed_m_s": 0.04,
+  "requested_duration_s": 1.2,
+  "cartesian_step_m": 0.001,
+  "joint_step_deg": 1.0,
+  "cartesian_line_tolerance_m": 0.00005,
+  "max_ik_step_deg": 5.0
+}

@@ -1,0 +1,15 @@
+{
+  "kp_accel": [225.0, 225.0, 225.0, 225.0, 10000.0],
+  "kd_accel": [30.0, 30.0, 30.0, 30.0, 200.0],
+  "reference_period_s": 0.01,
+  "log_period_s": 0.01,
+  "pose_position_tolerance_m": 0.00001,
+  "pose_orientation_tolerance_rad": 0.001,
+  "max_joint_acceleration_rad_s2": 5.0,
+  "compensate_passive": true,
+  "reject_reference_contacts": true,
+  "abort_penetration_m": 0.0005,
+  "settle_time_s": 0.5,
+  "approach_min_duration_s": 2.0,
+  "max_duration_s": 120.0
+}
